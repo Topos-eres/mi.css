@@ -1,0 +1,67 @@
+<h2>Login Form Example</h2>
+<form>
+  <div>
+    <label for="login-email">Email:</label><br />
+    <input type="email" id="login-email" name="email" required />
+  </div>
+  <div>
+    <label for="login-password">Password:</label><br />
+    <input type="password" id="login-password" name="password" required />
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" name="remember" />
+      Remember me
+    </label>
+  </div>
+  <button type="submit">Login</button>
+  <p>Forgot password? <a href="#">Reset here</a></p>
+</form>
+<hr/>
+<h2>Contact Form Example</h2>
+<form action="#" method="POST">
+  <fieldset>
+    <legend>Get in Touch</legend>
+    <div>
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" placeholder="Your name" required />
+    </div>
+    <div>
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+    </div>
+    <div>
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" rows="4" placeholder="How can we help?" required></textarea>
+    </div>
+    <div>
+      <button type="submit">Send Message</button>
+    </div>
+  </fieldset>
+</form>
+<hr />
+<h2>Survey Form Example</h2>
+<form>
+  <fieldset>
+    <div style="margin:1em 0">
+      <label>How would you rate our service?</label><br />
+      <input type="radio" name="rating" id="excellent" />
+      <label for="excellent">Excellent</label>
+      <input type="radio" name="rating" id="good" />
+      <label for="good">Good</label>
+      <input type="radio" name="rating" id="average" />
+      <label for="average">Average</label>
+      <input type="radio" name="rating" id="poor" />
+      <label for="poor">Poor</label>
+    </div>
+    <div>
+      <label for="feedback">Additional feedback:</label><br />
+      <textarea id="feedback" name="feedback" rows="3"></textarea><br/>
+      <label for="subscribe">
+        <input type="checkbox" id="subscribe" name="subscribe" />
+        Subscribe to our newsletter
+      </label>
+    </div>
+    <button style="margin:1em 0" type="submit">Submit Survey</button>
+  </fieldset>
+</form>

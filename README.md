@@ -11,6 +11,11 @@ minimal website cascading style sheets (CSS) (~1kb)
 > [!WARNING]
 > You must minify or bundle mi.css.
 
+## ✨ Examples
+
+- [izolipe.com](https://izolipe.com/) - Uses mi.css as the base stylesheet.
+- [notwindstone portfolio](https://notwindstone.github.io/) - Uses an alternative version of mi.css.
+
 ## 📜 License
 
 - [mi.css](https://github.com/FelipeIzolan/mi.css) - The unlicense
