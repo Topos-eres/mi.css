@@ -1,94 +1,90 @@
-html,
-body {
+@font-face {
+  font-family: Inter;
+  src: url(/_astro/Inter-Regular.COLGFB3M.woff2) format("woff2");
+  font-display: swap;
+}
+
+/* Base reset + typography */
+html, body {
   color: #212121;
-  background: #f6f6f6;
+  background: #f0f4f8;
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: Inter, system-ui, sans-serif;
   line-height: 1.6;
 }
 
 body {
   margin: auto;
   padding: 1em;
-  max-width: 40em;
+  max-width: 37em;
 }
 
-/*------*/
-/* Additional elements that require margin can be added here as needed */
-/*------*/
-p,
-hr,
-nav,
-main,
-header,
-footer {
+/* Spacing for flow content */
+p, section, hr {
   margin: 1em 0;
 }
 
-/*------*/
-
-article h1 {
-  /*override :-webkit-any*/
-  font-size: 2em;
+main {
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align all items to the left */
+}
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em;
+  margin: 1em 0;
 }
 
+/* Links inherit color */
 a {
   color: inherit;
+  text-decoration: none;
 }
 
-pre {
+/* Pre & code */
+pre, code {
+  color: #fff;
+  background: #212121;
+  overflow: auto;
   padding: 1em;
   border-radius: 3px;
 }
 
+/* Images & SVG */
 img {
   height: auto;
   max-width: 100%;
 }
-
-input {
+svg {
   vertical-align: middle;
 }
 
+/* Blockquote */
 blockquote {
   margin: 0;
   border-left: 4px solid #212121;
   padding-left: 1em;
 }
 
-ul,
-ol {
+/* Lists */
+ul, ol {
   padding: 0 1em;
   list-style-position: inside;
 }
 
-pre,
-code {
-  color: white;
-  background: #212121;
-  overflow: auto;
-}
-
-input:disabled,
-button:disabled {
-  opacity: 0.9;
-}
-
-td,
-th,
-table {
+/* Tables */
+table, th, td {
   border: 1px solid #212121;
-  padding: 8px;
   border-collapse: collapse;
+  padding: 8px;
 }
 
-input,
-button,
-select,
-textarea {
+/* Form controls */
+input, button, select, textarea {
   outline: none;
   background: none;
-  padding: 3px 7px;
+  padding: 3px 6px;
   border: 1px solid #212121;
   border-radius: 3px;
 }
@@ -99,4 +95,32 @@ input[type="button"],
 input[type="submit"] {
   color: #f6f6f6;
   background: #212121;
+  cursor: pointer;
+}
+
+/* Disabled state */
+input:disabled,
+button:disabled {
+  opacity: 0.9;
+}
+
+/* “Inode” link style */
+.inode {
+  display: flex; 
+  gap: 10px; /* Space between icon and text */
+  padding: 0px 0px; /* Comfortable click area */
+  transition: transform .2s, background-color .2s;
+  margin-bottom: 1em;
+  align-items: left; /* Vertical centering */
+  width: fit-content; /* Box exactly content size */
+}
+.inode:hover {
+  transform: translateX(5px);
+  background-color: rgba(33, 33, 33, 0.1); /* Hover effect */
+}
+/* Simple flex nav & footer */
+nav, footer > div {
+  display: flex;
+  font-size: 14px;
+  gap: 3px;
 }
