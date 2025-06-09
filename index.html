@@ -1,42 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-us">
+  <style>
+    /* Fix for image alignment */
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    /* Ensure the icon and text are properly aligned */
+    .inode {
+      align-items: center;
+    }
+  </style>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Izolipe Clone</title>
+
+  <!-- Sitemap / Icon / Canonical / OG tags -->
+  <link rel="sitemap" href="/sitemap-index.xml">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://izolipe.com/">
+  <meta name="description" content="Izolipe's Web Presence.">
+  <meta property="og:title" content="Izolipe">
+  <meta property="og:description" content="Izolipe's Web Presence.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://izolipe.com/og.png">
+  <meta property="og:logo" content="https://izolipe.com/logo.png">
+
+  <!-- Your new mi.css -->
   <link rel="stylesheet" href="./mi.css">
-  <title>mi.css</title>
 </head>
+<body lang="en">
 
-<body>
-  <header style="margin:0">
-    <h1 style="margin:0">ʕ•ᴥ•ʔ mi.css</h1>
-    <div style="display:flex;gap:2px;font-size:0.8em">
-      <a style="cursor:pointer;text-decoration:underline" onclick="load('home')">Home</a> |
-      <a style="cursor:pointer;text-decoration:underline" onclick="load('post')">Post Example</a> |
-      <a style="cursor:pointer;text-decoration:underline" onclick="load('form')">Form Example</a>
-    </div>
+  <!-- Header with home-icon nav -->
+  <header>
+    <nav>
+      <a href="/" aria-label="Link to home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+          <path fill="#212121" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v10q0 .825-.587 1.413T20 20z"/>
+        </svg>
+      </a>
+    </nav>
+    <h1 style="margin:0">Main</h1>
   </header>
-  <div id='root'>
-  </div>
+
+  <!-- Intro section -->
+  <section>
+    <img src="furina.jpg" alt="Icon" width="80" height="80">
+	<h2>Hi, Welcome to Topos-eres personal website!</h2>
+    <p>
+      Topos-eres is an aspiring mathematician, with interest on chess and music composition. This website will include my notes, projects, and works.
+    </p>
+  </section>
+
+  <!-- Main link list -->
+  <main >
+    <a class="inode" href="/math"    aria-label="Link to Math">   
+      <svg width="30" height="16" fill="currentColor" viewBox="0 0 16 16">
+        </svg> ∯ Math
+    </a>
+    <a class="inode" href="/chess"  aria-label="Link to Chess"> 
+      <svg width="30" height="16" fill="currentColor" viewBox="0 0 16 16">
+        </svg> ♘ Chess
+    </a>
+    <a class="inode" href="/Music" aria-label="Link to Music">
+      <svg width="30" height="16" fill="currentColor" viewBox="0 0 16 16">
+        </svg> 𝄞 Music pieces
+    </a>
+    <a class="inode" href="/projects" aria-label="Link to Projects"> 
+      <svg width="30" height="16" fill="currentColor" viewBox="0 0 16 16">
+        </svg> 🗎 Projects
+    </a>
+    <a class="inode" href="/tools"    aria-label="Link to Tools">    
+      <svg width="30" height="16" fill="currentColor" viewBox="0 0 16 16">
+        </svg> 🛠 Tools
+    </a>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <span>"Footer Description"</span>
+    <div>
+      <a href="" aria-label="Link to Ko-Fi">❤ Support me</a> /
+      <a href="" aria-label="Link to GitHub">GitHub</a> /
+      <a href="" aria-label="Link to Reddit">Reddit</a> /
+      <a href="" aria-label="Link to mail">Mail</a> /
+      <a href="" aria-label="Link to X">X</a>
+    </div>
+  </footer>
+
 </body>
-<script>
-  var root = document.getElementById('root');
-  var html5 = {};
-
-  function load(key) {
-    if (html5[key])
-      return root.innerHTML = html5[key];
-
-    fetch(`./pages/${key}.txt`)
-      .then(res => res.text())
-      .then(data => {
-        html5[key] = data;
-        load(key);
-      })
-  }
-
-  load('home');
-</script>
-
 </html>
